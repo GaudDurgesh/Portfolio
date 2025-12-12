@@ -4,12 +4,11 @@ const projects = [
   {
     id: 1,
     title: "Netflix Clone",
-    description:
-      "A responsive Netflix clone implemented with HTML, CSS, and JavaScript..",
+    description: "A responsive Netflix clone implemented with HTML, CSS, and JavaScript..",
     image: "/projects/Netflix.png",
     tags: ["HTML", "CSS", "JS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://netflix-frontend-45.vercel.app/",
+    githubUrl: "https://github.com/GaudDurgesh/Netflix-clone.git",
   },
   {
     id: 1,
