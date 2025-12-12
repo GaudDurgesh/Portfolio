@@ -11,7 +11,7 @@ const projects = [
     githubUrl: "https://github.com/GaudDurgesh/Netflix-clone.git",
   },
   {
-    id: 1,
+    id: 2,
     title: "SaaS Landing Page",
     description: "A beautiful landing page app using React and Tailwind.",
     image: "/projects/project1.png",
