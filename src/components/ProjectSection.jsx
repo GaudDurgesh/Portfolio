@@ -7,7 +7,7 @@ const projects = [
     description: "A responsive Netflix clone implemented with HTML, CSS, and JavaScript..",
     image: "/projects/Netflix.png",
     tags: ["HTML", "CSS", "JS"],
-    demoUrl: "https://netflix-frontend-45.vercel.app/",
+    demoUrl: "#",
     githubUrl: "https://github.com/GaudDurgesh/Netflix-clone.git",
   },
   {
