@@ -20,9 +20,7 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4">
-            I create steller web experience with morden technologies.
-            Specializing in front-end developement, I build interface that are
-            both beautifull and functional
+            I’m a dedicated web developer with hands-on experience in both front-end and back-end development. Over the last few years, I’ve built multiple projects to strengthen my fundamentals and problem-solving skills. I focus on writing clean code, building practical applications, and growing every day as a full-stack developer.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
