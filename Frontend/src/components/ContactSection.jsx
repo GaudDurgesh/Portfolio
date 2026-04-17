@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect } from "react";
 
+
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,6 +22,7 @@ export const ContactSection = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const API_URL = import.meta.env.VITE_API_URL;
   const handelSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -28,7 +30,7 @@ export const ContactSection = () => {
 
     try {
    
-      const response = await fetch("http://localhost:5000/api/send-message", {
+      const response = await fetch(`${API_URL}/api/send-message`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
