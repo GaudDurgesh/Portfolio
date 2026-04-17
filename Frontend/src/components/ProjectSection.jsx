@@ -3,12 +3,13 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Netflix Clone",
-    description: "A responsive Netflix clone implemented with HTML, CSS, and JavaScript..",
-    image: "/projects/Netflix.png",
-    tags: ["HTML", "CSS", "JS"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/GaudDurgesh/Netflix-clone.git",
+    title: "Streaming Platform",
+    description:
+      "DevStream – A Netflix-inspired full-stack video streaming web app with a modern UI and dynamic movie browsing experience.",
+    image: "/projects/DevStream.png",
+    tags: ["MERN", "Redux", "Firebase"],
+    demoUrl: "https://dev-stream-blue.vercel.app",
+    githubUrl: "https://dev-stream-blue.vercel.app/signup",
   },
   {
     id: 2,
@@ -21,13 +22,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Chat Application",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A real-time chat application with instant messaging and a responsive user interface.",
+    image: "/projects/ChatApp.png",
+    tags: ["Socket.io", "Arcjet", "TailwindCSS"],
+    demoUrl: "https://chat-app-js-15e9.onrender.com/signup",
+    githubUrl: "https://github.com/GaudDurgesh/Chat-App-JS",
   },
 ];
 
@@ -45,9 +46,9 @@ export const ProjectSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
+              key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
@@ -61,7 +62,10 @@ export const ProjectSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span
+                      key={tag}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -74,17 +78,17 @@ export const ProjectSection = () => {
                   <div className="flex space-x-3">
                     <a
                       href={project.demoUrl}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
                       target="_blank"
                     >
-                      <ExternalLink size={20} />
+                      <ExternalLink size={20} /> Demo URL
                     </a>
                     <a
-                      href={project.demoUrl}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      href={project.githubUrl}
+                      className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
                       target="_blank"
                     >
-                      <Github size={20} />
+                      <Github size={20} /> GitHub URL
                     </a>
                   </div>
                 </div>{" "}
@@ -93,9 +97,13 @@ export const ProjectSection = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <a href="https://github.com/GaudDurgesh?tab=repositories" target="_blank" className="cosmic-button w-fit flex items-center mx-auto gap-2">
+          <a
+            href="https://github.com/GaudDurgesh?tab=repositories"
+            target="_blank"
+            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+          >
             {" "}
-            Check My GitHub <ArrowRight  size={16}/>
+            Check My GitHub <ArrowRight size={16} />
           </a>
         </div>
       </div>
